@@ -2,7 +2,7 @@
 	//to upload the image from any link
 	$conn = mysqli_connect('localhost','root','','test');
 	if(!$conn) { die('could not connect!'); }
-	$image = file_get_contents('http://www.keenthemes.com/preview/conquer/assets/plugins/jcrop/demos/demo_files/image1.jpg');
+	$image = file_get_contents('https://avatars3.githubusercontent.com/u/13763001?v=3&s=460');
 	$image = $conn->real_escape_string($image);
 	$q = mysqli_query($conn,"INSERT INTO `testblob`(`image`) VALUES('$image')");
 	if($q) echo 'image stored successfully';
